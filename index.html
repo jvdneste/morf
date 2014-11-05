@@ -34,190 +34,190 @@
                         el.stop().animate(elattrs[+(now = !now)], 1000);
                     });
                 })();
-                // Ellipse
-                (function () {
-                    r.circle(40, 90, 20).attr(dashed);
-                    r.ellipse(140, 90, 20, 10).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r45"});
-                    var el = r.ellipse(40, 90, 20, 20).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{ry: 10, transform: "t100,0r45"}, {ry: 20, transform: ""}],
-                        now = 1;
-                    r.arrow(90, 90).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Rect
-                (function () {
-                    r.rect(19.5, 119.5, 40, 40).attr(dashed);
-                    r.rect(120, 130, 30, 20).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r120"});
-                    var el = r.rect(20, 120, 39, 39).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{x: 120, y: 130, transform: "r120", width: 30, height: 20, stroke: "#f00", opacity: .3, "stroke-width": 10}, {x: 20, y: 120, transform: "", width: 39, height: 39, stroke: "#fff", opacity: 1, "stroke-width": 2}],
-                        now = 1;
-                    r.arrow(90, 140).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Path 1
-                (function () {
-                    r.path("M20,189.5c0-20 40,20 40,0").attr(dashed);
-                    r.path("M120,189.5c0-20 40,20 40,0").attr(dashed);
-                    var el = r.path("M20,189.5c0-20 40,20 40,0").attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: "M120,189.5c0-20 40,20 40,0"}, {path: "M20,189.5c0-20 40,20 40,0c"}],
-                        now = 1;
-                    r.arrow(90, 190).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Path 2
-                (function () {
-                    r.path("M20,240c0-20 40,-20 40,0c0,20 -40,20 -40,0z").attr(dashed);
-                    r.path("M120,240c0-20 40,20 40,0c0-20 -40,20 -40,0z").attr(dashed);
-                    var el = r.path("M20,240c0-20 40,-20 40,0c0,20 -40,20 -40,0z").attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: "M120,240c0-20 40,20 40,0c0-20 -40,20 -40,0z"}, {path: "M20,240c0-20 40,-20 40,0c0,20 -40,20 -40,0z"}],
-                        now = 1;
-                    r.arrow(90, 240).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Path 3
-                (function () {
-                    r.path("M20,290c0-20 40,20 40,0").attr(dashed);
-                    r.path("M120,290c0-20 40,20 40,0c0-20 -40,20 -40,0z").attr(dashed);
-                    var el = r.path("M20,290c0-20 40,20 40,0").attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: "M120,290c0-20 40,20 40,0c0-20 -40,20 -40,0z"}, {path: "M20,290c0-20 40,20 40,0c"}],
-                        now = 1;
-                    r.arrow(90, 290).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Path 4
-                (function () {
-                    var path1 = "M20,336c0-20 40,20 40,0m-40,8c0-20 40,20 40,0",
-                        path2 = "M120,340c0-20 40,20 40,0c0-20 -40,20 -40,0z";
-                    r.path(path1).attr(dashed);
-                    r.path(path2).attr(dashed);
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: path2}, {path: path1}],
-                        now = 1;
-                    r.arrow(90, 340).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Path 5
-                (function () {
-                    var path1 = "M20,390l0-20 5,0 0,40 5,0 0-40 5,0 0,40 5,0 0-40 5,0 0,40 5,0 0-40 5,0 0,40 5,0 0-20",
-                        path2 = "M120,390c0-20 40,20 40,0c0-20 -40,20 -40,0z";
-                    r.path(path1).attr(dashed);
-                    r.path(path2).attr(dashed);
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: path2}, {path: path1}],
-                        now = 1;
-                    r.arrow(90, 390).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Path 6
-                (function () {
-                    var path1 = "M170,40c0-20 40,20 40,0c0-20 -40,20 -40,0z",
-                        path2 = "M270,40c0-20 40,20 40,0c0-20 -40,20 -40,0z";
-                    r.path(path1).attr(dashed);
-                    r.path(path2).attr(dashed);
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{transform: "t100,0r360"}, {transform: ""}],
-                        now = 1;
-                    r.arrow(240, 40).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Path 7
-                (function () {
-                    var path1 = "M170,90c0-20 40,20 40,0c0-20 -40,20 -40,0z",
-                        path2 = "M270,90c0-20 40,20 40,0c0-20 -40,20 -40,0z";
-                    var t = r.path(path1).attr(dashed);
-                    r.path(path2).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r90"});
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{transform: "t100,0r90"}, {transform: ""}],
-                        now = 1;
-                    r.arrow(240, 90).click(function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    });
-                })();
-                // Path 8
-                (function () {
-                    var path1 = "M170,140c0-20 40,20 40,0c0-20 -40,20 -40,0z",
-                        path2 = "M270,140c0-20 40,20 40,0c0-20 -40,20 -40,0z";
-                    r.path(path1).attr(dashed);
-                    var t = r.path(path2).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r225s2"});
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{transform: "t100,0r225s2"}, {transform: ""}],
-                        now = 1;
-                    r.arrow(240, 140).click(function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    });
-                })();
-                // Text
-                (function () {
-                    r.text(190, 190, "Yay!").attr({font: '10px "Helvetica Neue", Arial', fill: "none", stroke: "#666", "stroke-dasharray": "-"});
-                    r.text(190, 190, "Yay!").attr({font: '10px "Helvetica Neue", Arial', fill: "none", stroke: "#666", "stroke-dasharray": "-", transform: "t100,0r360s3"});
-                    var el = r.text(190, 190, "Yay!").attr({font: '10px "Helvetica Neue", Arial', fill: "#fff"}),
-                        // elattrs = [{x: 290, "font-size": 30, transform: "r360"}, {x: 190, "font-size": 10, transform: "r0"}],
-                        elattrs = [{transform: "t100,0r360s3"}, {transform: ""}],
-                        now = 1;
-                    r.arrow(240, 190).click(function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    });
-                })();
-                // Rect
-                (function () {
-                    var path1 = "M170,220l40,0 0,40 -40,0z",
-                        path2 = "M290,220l20,40 -40,0z";
-                    r.path("M170.5,220.5l40,0 0,40 -40,0z").attr(dashed);
-                    r.path(path2).attr(dashed);
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: path2}, {path: path1}],
-                        now = 1;
-                    r.arrow(240, 240).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Rect 2
-                (function () {
-                    var path1 = "M210,270l0,40 -40,0 0-40z",
-                        path2 = "M290,270l20,40 -40,0z";
-                    r.path("M210.5,270.5l0,40 -40,0 0-40z").attr(dashed);
-                    r.path(path2).attr(dashed);
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: path2}, {path: path1}],
-                        now = 1;
-                    r.arrow(240, 290).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Rect 3
-                (function () {
-                    var path1 = "M190.5,320.5A20,20,0,1,1,190.1,320.5z",
-                        path2 = "M290.5,320.5l20,40 -40,0z";
-                    r.path(path1).attr(dashed);
-                    r.path(path2).attr(dashed);
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: path2}, {path: path1}],
-                        now = 1;
-                    r.arrow(240, 340).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
-                // Rect 3
-                (function () {
-                    var path1 = "M190.5,370.5c11,0 20,9 20,20c0,11 -9,20 -20,20c-11,0 -20-9 -20-20c0-11 9-20 20-20z",
-                        path2 = "M290.5,370.5l20,20 -20,20 -20-20z";
-                    r.path(path1).attr(dashed);
-                    r.path(path2).attr(dashed);
-                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{path: path2}, {path: path1}],
-                        now = 1;
-                    r.arrow(240, 390).node.onclick = function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    };
-                })();
+                // // Ellipse
+                // (function () {
+                //     r.circle(40, 90, 20).attr(dashed);
+                //     r.ellipse(140, 90, 20, 10).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r45"});
+                //     var el = r.ellipse(40, 90, 20, 20).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{ry: 10, transform: "t100,0r45"}, {ry: 20, transform: ""}],
+                //         now = 1;
+                //     r.arrow(90, 90).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Rect
+                // (function () {
+                //     r.rect(19.5, 119.5, 40, 40).attr(dashed);
+                //     r.rect(120, 130, 30, 20).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r120"});
+                //     var el = r.rect(20, 120, 39, 39).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{x: 120, y: 130, transform: "r120", width: 30, height: 20, stroke: "#f00", opacity: .3, "stroke-width": 10}, {x: 20, y: 120, transform: "", width: 39, height: 39, stroke: "#fff", opacity: 1, "stroke-width": 2}],
+                //         now = 1;
+                //     r.arrow(90, 140).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Path 1
+                // (function () {
+                //     r.path("M20,189.5c0-20 40,20 40,0").attr(dashed);
+                //     r.path("M120,189.5c0-20 40,20 40,0").attr(dashed);
+                //     var el = r.path("M20,189.5c0-20 40,20 40,0").attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: "M120,189.5c0-20 40,20 40,0"}, {path: "M20,189.5c0-20 40,20 40,0c"}],
+                //         now = 1;
+                //     r.arrow(90, 190).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Path 2
+                // (function () {
+                //     r.path("M20,240c0-20 40,-20 40,0c0,20 -40,20 -40,0z").attr(dashed);
+                //     r.path("M120,240c0-20 40,20 40,0c0-20 -40,20 -40,0z").attr(dashed);
+                //     var el = r.path("M20,240c0-20 40,-20 40,0c0,20 -40,20 -40,0z").attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: "M120,240c0-20 40,20 40,0c0-20 -40,20 -40,0z"}, {path: "M20,240c0-20 40,-20 40,0c0,20 -40,20 -40,0z"}],
+                //         now = 1;
+                //     r.arrow(90, 240).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Path 3
+                // (function () {
+                //     r.path("M20,290c0-20 40,20 40,0").attr(dashed);
+                //     r.path("M120,290c0-20 40,20 40,0c0-20 -40,20 -40,0z").attr(dashed);
+                //     var el = r.path("M20,290c0-20 40,20 40,0").attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: "M120,290c0-20 40,20 40,0c0-20 -40,20 -40,0z"}, {path: "M20,290c0-20 40,20 40,0c"}],
+                //         now = 1;
+                //     r.arrow(90, 290).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Path 4
+                // (function () {
+                //     var path1 = "M20,336c0-20 40,20 40,0m-40,8c0-20 40,20 40,0",
+                //         path2 = "M120,340c0-20 40,20 40,0c0-20 -40,20 -40,0z";
+                //     r.path(path1).attr(dashed);
+                //     r.path(path2).attr(dashed);
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: path2}, {path: path1}],
+                //         now = 1;
+                //     r.arrow(90, 340).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Path 5
+                // (function () {
+                //     var path1 = "M20,390l0-20 5,0 0,40 5,0 0-40 5,0 0,40 5,0 0-40 5,0 0,40 5,0 0-40 5,0 0,40 5,0 0-20",
+                //         path2 = "M120,390c0-20 40,20 40,0c0-20 -40,20 -40,0z";
+                //     r.path(path1).attr(dashed);
+                //     r.path(path2).attr(dashed);
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: path2}, {path: path1}],
+                //         now = 1;
+                //     r.arrow(90, 390).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Path 6
+                // (function () {
+                //     var path1 = "M170,40c0-20 40,20 40,0c0-20 -40,20 -40,0z",
+                //         path2 = "M270,40c0-20 40,20 40,0c0-20 -40,20 -40,0z";
+                //     r.path(path1).attr(dashed);
+                //     r.path(path2).attr(dashed);
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{transform: "t100,0r360"}, {transform: ""}],
+                //         now = 1;
+                //     r.arrow(240, 40).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Path 7
+                // (function () {
+                //     var path1 = "M170,90c0-20 40,20 40,0c0-20 -40,20 -40,0z",
+                //         path2 = "M270,90c0-20 40,20 40,0c0-20 -40,20 -40,0z";
+                //     var t = r.path(path1).attr(dashed);
+                //     r.path(path2).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r90"});
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{transform: "t100,0r90"}, {transform: ""}],
+                //         now = 1;
+                //     r.arrow(240, 90).click(function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     });
+                // })();
+                // // Path 8
+                // (function () {
+                //     var path1 = "M170,140c0-20 40,20 40,0c0-20 -40,20 -40,0z",
+                //         path2 = "M270,140c0-20 40,20 40,0c0-20 -40,20 -40,0z";
+                //     r.path(path1).attr(dashed);
+                //     var t = r.path(path2).attr({fill: "none", stroke: "#666", "stroke-dasharray": "- ", transform: "r225s2"});
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{transform: "t100,0r225s2"}, {transform: ""}],
+                //         now = 1;
+                //     r.arrow(240, 140).click(function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     });
+                // })();
+                // // Text
+                // (function () {
+                //     r.text(190, 190, "Yay!").attr({font: '10px "Helvetica Neue", Arial', fill: "none", stroke: "#666", "stroke-dasharray": "-"});
+                //     r.text(190, 190, "Yay!").attr({font: '10px "Helvetica Neue", Arial', fill: "none", stroke: "#666", "stroke-dasharray": "-", transform: "t100,0r360s3"});
+                //     var el = r.text(190, 190, "Yay!").attr({font: '10px "Helvetica Neue", Arial', fill: "#fff"}),
+                //         // elattrs = [{x: 290, "font-size": 30, transform: "r360"}, {x: 190, "font-size": 10, transform: "r0"}],
+                //         elattrs = [{transform: "t100,0r360s3"}, {transform: ""}],
+                //         now = 1;
+                //     r.arrow(240, 190).click(function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     });
+                // })();
+                // // Rect
+                // (function () {
+                //     var path1 = "M170,220l40,0 0,40 -40,0z",
+                //         path2 = "M290,220l20,40 -40,0z";
+                //     r.path("M170.5,220.5l40,0 0,40 -40,0z").attr(dashed);
+                //     r.path(path2).attr(dashed);
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: path2}, {path: path1}],
+                //         now = 1;
+                //     r.arrow(240, 240).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Rect 2
+                // (function () {
+                //     var path1 = "M210,270l0,40 -40,0 0-40z",
+                //         path2 = "M290,270l20,40 -40,0z";
+                //     r.path("M210.5,270.5l0,40 -40,0 0-40z").attr(dashed);
+                //     r.path(path2).attr(dashed);
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: path2}, {path: path1}],
+                //         now = 1;
+                //     r.arrow(240, 290).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Rect 3
+                // (function () {
+                //     var path1 = "M190.5,320.5A20,20,0,1,1,190.1,320.5z",
+                //         path2 = "M290.5,320.5l20,40 -40,0z";
+                //     r.path(path1).attr(dashed);
+                //     r.path(path2).attr(dashed);
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: path2}, {path: path1}],
+                //         now = 1;
+                //     r.arrow(240, 340).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
+                // // Rect 3
+                // (function () {
+                //     var path1 = "M190.5,370.5c11,0 20,9 20,20c0,11 -9,20 -20,20c-11,0 -20-9 -20-20c0-11 9-20 20-20z",
+                //         path2 = "M290.5,370.5l20,20 -20,20 -20-20z";
+                //     r.path(path1).attr(dashed);
+                //     r.path(path2).attr(dashed);
+                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{path: path2}, {path: path1}],
+                //         now = 1;
+                //     r.arrow(240, 390).node.onclick = function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     };
+                // })();
                 // Logo and title
                 var logo = r.set(
                 r.rect(14, 13, 116, 116, 30).attr({stroke: "none", fill: "#fff", transform: "r45"}),
