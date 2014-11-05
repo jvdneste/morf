@@ -23,17 +23,17 @@
                 // var r = Raphael("holder", 619, 419),
                 var r = Raphael("holder", 619, 419), //Raphael(0, 0, "100%", "100%"),
                     dashed = {fill: "none", stroke: "#666", "stroke-dasharray": "- "};
-                // Ellipse
-                (function () {
-                    r.circle(40, 40, 20).attr(dashed);
-                    r.circle(140, 40, 20).attr(dashed);
-                    var el = r.circle(40, 40, 20).attr({fill: "#fff", "fill-opacity": 0, stroke: "#fff", "stroke-width": 2}),
-                        elattrs = [{cx: 140, fill: "#f00", "fill-opacity": 1}, {cx: 40, fill: "#fff", "fill-opacity": 0}],
-                        now = 1;
-                    r.arrow(90, 40).click(function () {
-                        el.stop().animate(elattrs[+(now = !now)], 1000);
-                    });
-                })();
+                // // Ellipse
+                // (function () {
+                //     r.circle(40, 40, 20).attr(dashed);
+                //     r.circle(140, 40, 20).attr(dashed);
+                //     var el = r.circle(40, 40, 20).attr({fill: "#fff", "fill-opacity": 0, stroke: "#fff", "stroke-width": 2}),
+                //         elattrs = [{cx: 140, fill: "#f00", "fill-opacity": 1}, {cx: 40, fill: "#fff", "fill-opacity": 0}],
+                //         now = 1;
+                //     r.arrow(90, 40).click(function () {
+                //         el.stop().animate(elattrs[+(now = !now)], 1000);
+                //     });
+                // })();
                 // // Ellipse
                 // (function () {
                 //     r.circle(40, 90, 20).attr(dashed);
@@ -205,19 +205,20 @@
                 //         el.stop().animate(elattrs[+(now = !now)], 1000);
                 //     };
                 // })();
-                // // Rect 3
-                // (function () {
-                //     var path1 = "M190.5,370.5c11,0 20,9 20,20c0,11 -9,20 -20,20c-11,0 -20-9 -20-20c0-11 9-20 20-20z",
-                //         path2 = "M290.5,370.5l20,20 -20,20 -20-20z";
-                //     r.path(path1).attr(dashed);
-                //     r.path(path2).attr(dashed);
-                //     var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
-                //         elattrs = [{path: path2}, {path: path1}],
-                //         now = 1;
-                //     r.arrow(240, 390).node.onclick = function () {
-                //         el.stop().animate(elattrs[+(now = !now)], 1000);
-                //     };
-                // })();
+                // Rect 3
+                (function () {
+                    var path1 = "M190.5,370.5c11,0 20,9 20,20c0,11 -9,20 -20,20c-11,0 -20-9 -20-20c0-11 9-20 20-20z",
+                        path2 = "M290.5,370.5l20,20 -20,20 -20-20z";
+                    r.path(path1).attr(dashed);
+                    r.path(path2).attr(dashed);
+                    var el = r.path(path1).attr({fill: "none", stroke: "#fff", "stroke-width": 2}),
+                        elattrs = [{path: path2}, {path: path1}],
+                        now = 1;
+                    r.arrow(240, 390).node.onclick = function () {
+                        el.stop().animate(elattrs[+(now = !now)], 1000);
+                    };
+                })();
+
                 // Logo and title
                 var logo = r.set(
                 r.rect(14, 13, 116, 116, 30).attr({stroke: "none", fill: "#fff", transform: "r45"}),
